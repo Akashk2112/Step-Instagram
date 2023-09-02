@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.cursor{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000;
+    position: fixed;
+    transition: all linear 0.1s;
+    z-index: 99;
+}
+
+#box{
+    width: 400px;
+    height: 650px;
+    background-color: #D8D9DA;
+    border-radius: 15px;
+    border: 3px solid rgba(46, 139, 86, 0.445);
+    position: relative;  
+}
+
+#card{
+    width: 100%;
+    height: 120px;
+    /* background-color: aqua; */
+    padding: 15PX;
+    border-bottom: 1px dotted #000 ;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+      
+}
+#card::-webkit-scrollbar {
+    display: none;
+  }
+
+.storyCricle{
+    height: 90px;
+    width: 90px;
+    border: 4px solid #ff00005d;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 5px;    
+}
+
+.storyCricle img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#fullStory{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    position: absolute; 
+    display: none;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#page{
+    width: 100%;
+    height: 530px;
+    /* background-color: red; */
+    padding: 5px;
+    position: relative;
+    overflow: auto;
+}
+
+#page img{
+    width: 100%;
+    border-radius: 10px;
+   
+}
+#page h5{
+    padding: 10px;
+}
+
+#likes i{
+    color: #000;
+    font-size: 25px;
+}
+
+#likes .heart{
+    position: absolute;
+    color: red;
+    opacity: 0;
+    transition: transform linear 0.4s;
+}
+
+#username{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px ;
+}
+
+#username h1{
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#username button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #068FFF;
+    color: #fff;
+    border: 0;
+    font-size: 12px;
+    cursor: pointer;
+    
+}
+
+#caption{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    
+    font-family: 'Rajdhani', sans-serif;
+}
+
+#likes{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.pop-up{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 90px;
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+    transition: transform ease 0.6s;
+}
