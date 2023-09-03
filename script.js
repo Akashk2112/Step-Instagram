@@ -68,8 +68,24 @@ card.addEventListener("dblclick", function(){
     },1000)
 })
 
+let check = 0
 heart.addEventListener("click",function(){
-    heart.style.opacity = "0"
+    if (check == 0){
+        popUp.style.transform = "translate(-50%,-50%) scale(1)"
+        popUp.style.opacity = "0.9"
+        heart.style.opacity = "1"
+        heart.style.transform = "scale(1.2)"
+        setTimeout (function(){
+            popUp.style.transform = "translate(-50%,-50%) scale(0)" 
+            popUp.style.opacity = "0"
+            heart.style.transform = "scale(1)"
+        },1000)
+        check = 1;
+    }else{
+        heart.style.opacity = "0"
+        check = 0;
+    }
+
 })
 
 var crsr = document.querySelector(".cursor")
